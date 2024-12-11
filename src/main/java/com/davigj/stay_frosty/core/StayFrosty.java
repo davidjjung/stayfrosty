@@ -23,6 +23,7 @@ public class StayFrosty {
         bus.addListener(this::clientSetup);
         bus.addListener(this::dataSetup);
         context.registerConfig(ModConfig.Type.COMMON, SFConfig.COMMON_SPEC);
+        context.registerConfig(ModConfig.Type.CLIENT, SFConfig.CLIENT_SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

@@ -11,7 +11,7 @@ itemIcon = "minecraft:dirt"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
 credits = "AuroraAster"
-displayURL = "https://modrinth.com/project/stay-frosty"
+displayURL = "https://modrinth.com/mod/stay-frosty"
 displayName = "Stay Frosty"
 description = '''
     Cold mobs make ya cold now. Who woulda thunk it

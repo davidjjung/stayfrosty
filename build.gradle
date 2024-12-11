@@ -79,11 +79,6 @@ dependencies {
     compileOnly fg.deobf("curse.maven:feathers-699933:4573576")
     compileOnly fg.deobf("curse.maven:elenai-dodge-2-442962:4127740")
 
-    runtimeOnly fg.deobf("curse.maven:windswept-636321:4817132")
-    runtimeOnly fg.deobf("maven.modrinth:blueprint:SnLXbWe9")
-    runtimeOnly fg.deobf("curse.maven:citadel-331936:4556677")
-    runtimeOnly fg.deobf("maven.modrinth:alexs-mobs:BgeYEhGG")
-
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-forge-api:${project.jei}")
     runtimeOnly fg.deobf("mezz.jei:jei-${project.minecraft}-forge:${project.jei}")

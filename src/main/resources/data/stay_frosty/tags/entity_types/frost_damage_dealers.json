@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "windswept:chilled",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:froststalker",
+      "required": false
+    }
+  ]
+}

@@ -10,6 +10,7 @@ public class SFConfig {
         public final ForgeConfigSpec.ConfigValue<Integer> snowGolemFreezeTicks;
         public final ForgeConfigSpec.ConfigValue<Integer> snowballFreezeTicks;
         public final ForgeConfigSpec.ConfigValue<Integer> otherFreezeTicks;
+        public final ForgeConfigSpec.ConfigValue<Integer> bloviatorFreezeTicks;
         public final ForgeConfigSpec.ConfigValue<Integer> frostCap;
 
         Common (ForgeConfigSpec.Builder builder) {
@@ -18,6 +19,7 @@ public class SFConfig {
             snowGolemFreezeTicks = builder.comment("Ticks of frost added to an entity upon getting hit by a snow golem").define("Snow Golem freeze ticks", 150);
             snowballFreezeTicks = builder.comment("Ticks of frost added to an entity upon getting hit by a snowball").define("Snowball freeze ticks", 50);
             otherFreezeTicks = builder.comment("Ticks of frost added to an entity upon getting hurt by entities in the frost_damage_dealers tag").define("Frost damage dealer ticks", 150);
+            bloviatorFreezeTicks = builder.comment("Frost ticks upon getting hit by the wind of a Bloviator from Cloud Storage").define("Bloviator freeze ticks", 3);
             frostCap = builder.comment("Upper bound for ticks of frost accrued by mob attacks").define("Freeze cap", 300);
             straySlownessDisable = builder.comment("Stray arrows no longer give Slowness").define("Stray slowness disabled", true);
             builder.pop();

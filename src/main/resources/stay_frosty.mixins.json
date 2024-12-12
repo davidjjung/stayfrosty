@@ -6,6 +6,7 @@
   "refmap": "stay_frosty.refmap.json",
   "mixins": [
     "ArrowMixin",
+    "BloviatorEntityMixin",
     "StrayMixin"
   ],
   "client": [

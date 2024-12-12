@@ -76,8 +76,9 @@ sourceSets.main.resources {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
-    compileOnly fg.deobf("curse.maven:feathers-699933:4573576")
-    compileOnly fg.deobf("curse.maven:elenai-dodge-2-442962:4127740")
+    compileOnly fg.deobf("maven.modrinth:feathers:lHj2edCG")
+    implementation fg.deobf("maven.modrinth:citadel:mL5pYWWo")
+    implementation fg.deobf("maven.modrinth:alexs-cloud-storage:RdcFsm0S")
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-forge-api:${project.jei}")

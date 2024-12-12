@@ -25,7 +25,7 @@ public abstract class ArrowMixin extends AbstractArrow{
         Arrow arrow = (Arrow)(Object)this;
         if (arrow.getOwner() instanceof Stray && SFConfig.CLIENT.snowParticles.get() && this.inGroundTime < 60) {
             for(int j = 0; j < p_36877_; ++j) {
-                this.level.addParticle(ParticleTypes.SNOWFLAKE, this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D), 0, 0, 0);
+                this.level().addParticle(ParticleTypes.SNOWFLAKE, this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D), 0, 0, 0);
             }
         }
     }

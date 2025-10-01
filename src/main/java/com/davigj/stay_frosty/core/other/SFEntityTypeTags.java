@@ -10,6 +10,6 @@ public class SFEntityTypeTags {
     public static final TagKey<EntityType<?>> FROST_DAMAGE_DEALERS = entityTypeTag("frost_damage_dealers");
 
     private static TagKey<EntityType<?>> entityTypeTag(String name) {
-        return TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(StayFrosty.MOD_ID, name));
+        return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(StayFrosty.MOD_ID, name));
     }
 }

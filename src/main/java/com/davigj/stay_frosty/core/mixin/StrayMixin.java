@@ -19,9 +19,9 @@ public abstract class StrayMixin extends AbstractSkeleton {
     }
 
     @Inject(method = "getArrow", at = @At("RETURN"), cancellable = true)
-    public void modifyArrow(ItemStack stack, float p_33847_, CallbackInfoReturnable<AbstractArrow> cir) {
+    public void modifyArrow(ItemStack arrow, float velocity, ItemStack weapon, CallbackInfoReturnable<AbstractArrow> cir) {
         if (SFConfig.COMMON.straySlownessDisable.get()) {
-            cir.setReturnValue(super.getArrow(stack, p_33847_));
+            cir.setReturnValue(super.getArrow(arrow, velocity, weapon));
         }
     }
 }

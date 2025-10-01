@@ -1,19 +1,19 @@
 package com.davigj.stay_frosty.core;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class SFConfig {
     public static class Common {
-        public final ForgeConfigSpec.ConfigValue<Integer> strayFreezeTicks;
-        public final ForgeConfigSpec.ConfigValue<Boolean> straySlownessDisable;
-        public final ForgeConfigSpec.ConfigValue<Integer> snowGolemFreezeTicks;
-        public final ForgeConfigSpec.ConfigValue<Integer> snowballFreezeTicks;
-        public final ForgeConfigSpec.ConfigValue<Integer> otherFreezeTicks;
-        public final ForgeConfigSpec.ConfigValue<Integer> bloviatorFreezeTicks;
-        public final ForgeConfigSpec.ConfigValue<Integer> frostCap;
+        public final ModConfigSpec.ConfigValue<Integer> strayFreezeTicks;
+        public final ModConfigSpec.ConfigValue<Boolean> straySlownessDisable;
+        public final ModConfigSpec.ConfigValue<Integer> snowGolemFreezeTicks;
+        public final ModConfigSpec.ConfigValue<Integer> snowballFreezeTicks;
+        public final ModConfigSpec.ConfigValue<Integer> otherFreezeTicks;
+        public final ModConfigSpec.ConfigValue<Integer> bloviatorFreezeTicks;
+        public final ModConfigSpec.ConfigValue<Integer> frostCap;
 
-        Common (ForgeConfigSpec.Builder builder) {
+        Common (ModConfigSpec.Builder builder) {
             builder.push("changes");
             strayFreezeTicks = builder.comment("Ticks of frost added to an entity upon getting hit by a stray").define("Stray freeze ticks", 200);
             snowGolemFreezeTicks = builder.comment("Ticks of frost added to an entity upon getting hit by a snow golem").define("Snow Golem freeze ticks", 150);
@@ -27,10 +27,10 @@ public class SFConfig {
     }
 
     public static class Client {
-        public final ForgeConfigSpec.ConfigValue<Boolean> snowParticles;
-        public final ForgeConfigSpec.ConfigValue<Boolean> freezingParticles;
+        public final ModConfigSpec.ConfigValue<Boolean> snowParticles;
+        public final ModConfigSpec.ConfigValue<Boolean> freezingParticles;
 
-        public Client(ForgeConfigSpec.Builder builder) {
+        public Client(ModConfigSpec.Builder builder) {
             builder.push("client");
             snowParticles = builder.comment("Stray arrows emit snowflake particles").define("Stray snowflake particles", true);
             freezingParticles = builder.comment("Freezing entities emit snowflake particles").define("Freezing snowflake particles", true);
@@ -38,19 +38,19 @@ public class SFConfig {
         }
     }
 
-    static final ForgeConfigSpec COMMON_SPEC;
+    static final ModConfigSpec COMMON_SPEC;
     public static final SFConfig.Common COMMON;
 
-    public static final ForgeConfigSpec CLIENT_SPEC;
+    public static final ModConfigSpec CLIENT_SPEC;
     public static final Client CLIENT;
 
 
     static {
-        final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(SFConfig.Common::new);
+        final Pair<Common, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure(SFConfig.Common::new);
         COMMON_SPEC = specPair.getRight();
         COMMON = specPair.getLeft();
 
-        Pair<Client, ForgeConfigSpec> clientSpecPair = new ForgeConfigSpec.Builder().configure(Client::new);
+        Pair<Client, ModConfigSpec> clientSpecPair = new ModConfigSpec.Builder().configure(Client::new);
         CLIENT_SPEC = clientSpecPair.getRight();
         CLIENT = clientSpecPair.getLeft();
     }

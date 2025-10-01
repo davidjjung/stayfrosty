@@ -1,17 +1,20 @@
 modLoader = "javafml"
-loaderVersion = "[32,)"
-issueTrackerURL = ""
+loaderVersion = "[1,)"
+issueTrackerURL = "https://github.com/davidjjung/stayfrosty/issues"
 license = "MIT License"
+
+[[mixins]]
+config = "stay_frosty.mixins.json"
 
 [[mods]]
 modId = "stay_frosty"
-version = "${file.jarVersion}"
+version = "${mod_version}"
 logoFile = "logo.png"
-itemIcon = "minecraft:dirt"
+itemIcon = "minecraft:snowball"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
 credits = "AuroraAster"
-displayURL = "https://modrinth.com/mod/stay-frosty"
+displayURL = "https://modrinth.com/project/stay_frosty"
 displayName = "Stay Frosty"
 description = '''
     Cold mobs make ya cold now. Who woulda thunk it
@@ -19,14 +22,14 @@ description = '''
 
 [[dependencies.stay_frosty]]
 modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.1,1.20.2)"
-ordering = "NONE"
+type = "required"
+versionRange = "[${mc_version}]"
+ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.stay_frosty]]
-modId = "forge"
-mandatory = true
-versionRange = "[47.1,)"
-ordering = "NONE"
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge},)"
+ordering = "AFTER"
 side = "BOTH"

@@ -27,6 +27,6 @@ side = "BOTH"
 [[dependencies.stay_frosty]]
 modId = "forge"
 mandatory = true
-versionRange = "[47.2,)"
+versionRange = "[47.1,)"
 ordering = "NONE"
 side = "BOTH"

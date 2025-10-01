@@ -3,7 +3,6 @@ package com.davigj.stay_frosty.core.other;
 import com.davigj.stay_frosty.core.SFConfig;
 import com.davigj.stay_frosty.core.StayFrosty;
 import com.elenai.feathers.effect.FeathersEffects;
-import com.github.alexthe668.cloudstorage.entity.BloviatorEntity;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
